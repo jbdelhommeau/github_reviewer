@@ -1,3 +1,6 @@
+# app.py
+
+from config import *
 from flask import Flask, request
 from reviewers import get_instance
 
@@ -55,4 +58,5 @@ def issue_comment(payload):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
+    app.debug = DEBUG
+    app.run()
